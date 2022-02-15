@@ -112,7 +112,6 @@ img{
 	position: absolute;left: 0;
 	top: 0;height: 100%;
 	width: 100%;
-	border: 2px solid transparent!important;
 	border-radius: 50% 40% / 40% 50%;
 	z-index: 1;
 	transform: rotate(150deg);
@@ -504,4 +503,111 @@ textarea.input-control{
 position: relative;
 z-index: 1
 overflow:hidden;
+}
+.header{
+	
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 2!important;
+	padding:8px 0;
+	height: 67px;
+}
+.header-main{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+.logo img{
+	width: 32px;
+	margin-right: 7px;
+}
+.logo a{
+	font-size: 28px;
+	text-transform: capitalize;
+	font-weight: 600;
+	color: var(--black-90)!important;
+	text-decoration: none!important;
+}
+.nav-toggler{
+	height: 34px!important;
+width: 40px!important;
+border:none;
+}
+.nav-toggler span{
+	display: block;
+	height: 2px;
+	width: 24px;
+	background-color: var(--black-90)!important;
+	margin: auto;
+	position: relative;
+	transition: background-color 0.3s ease;
+}
+.nav-toggler.active span{
+	background-color: transparent;
+
+}
+.nav-toggler span::before,
+.nav-toggler span::after{
+	content: '';
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--black-90);
+	/*transition: top 0.2s ease 0.2s, transform 0.2s ease; */
+
+
+}
+.nav-toggler span::before{
+	top: -7px;
+}
+.nav-toggler span::after{
+	top: 7px;
+}
+.nav-toggler.active span::before,
+.nav-toggler.active span::after{
+	top: 0;
+	transition-delay: 0s,0.2s;
+}
+.nav-toggler.active span::before{
+	transform: rotate(45deg);
+}
+.nav-toggler.active span::after{
+	transform: rotate(-45deg);
+}
+.nav{
+
+position: absolute;
+right: 0;
+top: 100%;
+margin-top: 8px;
+visibility: hidden;
+
+}
+.nav.active{
+	visibility: visible!important;
+}
+.nav li{
+	background-color: var(--white-alpha-40);
+	text-align: center;
+	transform: translateY(20px);
+}
+.nav a{
+	display: block;
+	text-decoration:none;
+	padding: 8px 30px ;
+	font-weight: 500;
+	color: var(--black-90)!important;
+	text-transform: capitalize;
+	position: relative;
+}
+.nav li:first-child{
+	border-radius: 10px 10px 0 0;
+}
+.nav li:last-child{
+	border-radius:  0 0 10px 10px;
 }
