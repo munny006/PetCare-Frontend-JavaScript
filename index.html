@@ -12,7 +12,7 @@
 
 	<title> PetCare </title>
 </head>
-<body>
+<body class="dark">
 	<header class="header">
 		<div class="container">
 			<div class="header-main">
@@ -25,11 +25,11 @@
 				</button>
 				<nav class="nav js-nav">
 					<ul>
-						<li style="--item:0"><a href="">home</a></li>
-						<li style="--item:1"><a href="">about</a></li>
-						<li style="--item:2"><a href="">services</a></li>
-						<li style="--item:3"><a href="">pricing</a></li>
-						<li style="--item:4"><a href="">contact</a></li>
+						<li style="--item:0"><a href="#home">home</a></li>
+						<li style="--item:1"><a href="#about">about</a></li>
+						<li style="--item:2"><a href="#services">services</a></li>
+						<li style="--item:3"><a href="#pricing">pricing</a></li>
+						<li style="--item:4"><a href="#contact">contact</a></li>
 					</ul>
 				</nav>
 				
@@ -39,14 +39,14 @@
 		
 	</header>
 
-	<section class="home">
+	<section class="home" id="home">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
 					<div class="home-text">
 						<h1>We provide the best <br>care for your pets</h1>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt <br> ut labore et dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipiscing elit <br>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						<a href="" class="btn"> Contact Us </a>
+						<a href="#contact" class="btn"> Contact Us </a>
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -67,7 +67,7 @@
 
 	</section>
 
-	<section class="about section-padding">
+	<section class="about section-padding" id="about">
 		<div class="container">
 			<div class="section-title">
 				<h2 class="title">about us</h2>
@@ -102,7 +102,7 @@
 		</div>
 		
 	</section>
-	<section class="services section-padding">
+	<section class="services section-padding" id="services">
 		<div class="container">
 			<div class="section-title">
 				<h2 class="title">services</h2>
@@ -214,7 +214,7 @@
 </section>
 
 
-<section class="pricing section-padding">
+<section class="pricing section-padding" id="pricing">
 	<div class="container">
 		<div class="section-title">
 			<h2 class="title">pricing</h2>
@@ -317,7 +317,7 @@
 	
 </section>
 
-<section class="Contact section-padding">
+<section class="Contact section-padding" id="contact">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6">
@@ -428,6 +428,10 @@
 	</div>
 </footer>
 
+<button type="button" class="switcher-btn js-switcher-btn">
+	<i class="fa" aria-hidden="true"></i>
+	
+</button>
 
 
 
